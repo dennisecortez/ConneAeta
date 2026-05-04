@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- CRITICAL: This line makes it phone-friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ConneAeta</title>
+</head>
+<body class="home-page" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('nabuclod.jpeg') no-repeat center center fixed; background-size: cover; background-color: #1a1a1a;">
+    <!-- Welcome Splash Screen -->
+<div id="welcome-overlay">
+    <div class="welcome-content">
+        <h1 class="welcome-main">Malaus ko pu!</h1>
+        <p class="welcome-sub">Welcome to the Aeta Community of Nabuclod!</p>
+        <!-- Button removed for automatic entry -->
+         <div class="loading-container">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+</div>
+    
+    <header>
+        <nav>
+            <a href="before-you-visit.html">Before You Visit</a>
+            <a href="etiquette.html">Etiquette</a>
+            <a href="photos.html">Photography</a>
+            <a href="support.html">Giving & Rights</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>ConneAeta</h1>
+            <p class="tagline">Connecting People to Aeta Etiquette and Rights <br class="desktop-only"> in Nabuclod, Floridablanca, Pampanga</p>
+            <div class="button-container">
+                <a href="before-you-visit.html" class="cta-button">Connect with Respect</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="quick-links">
+    <div class="glass-grid">
+        <!-- Card 1 -->
+        <a href="before-you-visit.html" class="glass-card">
+            <div class="card-icon">📍</div>
+            <h3>Prepare</h3>
+            <p>Essential logistics and mindset for your journey to Nabuclod.</p>
+            <span class="card-link">Learn More →</span>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="etiquette.html" class="glass-card">
+            <div class="card-icon">🤝</div>
+            <h3>Etiquette</h3>
+            <p>Guidelines on cultural respect and community interaction.</p>
+            <span class="card-link">Learn More →</span>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="photos.html" class="glass-card">
+            <div class="card-icon">📸</div>
+            <h3>Photography</h3>
+            <p>Documenting with dignity through consent-first practices.</p>
+            <span class="card-link">Learn More →</span>
+        </a>
+        <!-- New Card 4: Giving & Rights -->
+        <a href="support.html" class="glass-card">
+            <div class="card-icon">⚖️</div>
+            <h3>Giving & Rights</h3>
+            <p>Support with dignity through IPRA awareness and ethical advocacy.</p>
+            <span class="card-link">Learn More →</span>
+        </a>
+    </div>
+    
+</section>
+
+<!-- At the very bottom, right before the closing </body> tag -->
+    <script>
+    function dismissOverlay() {
+        const overlay = document.getElementById('welcome-overlay');
+        if (overlay) {
+            overlay.classList.add('overlay-hidden');
+            // Re-enable scrolling after the transition
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. Lock scrolling immediately
+        document.body.style.overflow = 'hidden';
+
+        // 2. Set timer to dismiss overlay after 3 seconds
+        setTimeout(dismissOverlay, 3000); 
+    });
+</script>
+
+</body>
+</html>
